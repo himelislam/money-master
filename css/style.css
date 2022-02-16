@@ -1,0 +1,16 @@
+body{
+    width: 90%;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+#title{
+    text-align: center;
+    color:aquamarine
+}
+.body-part{
+    display: flex;
+}
+.background-img{
+    image: float;
+    width: 60%;
+}
