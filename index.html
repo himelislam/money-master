@@ -10,31 +10,48 @@
 </head>
 <body>
     <header>
-        <h1 class="text-5xl text-center my-5 text-green-500 font-semibold">Money Bank</h1>
+        <h1 class="text-5xl text-center my-7 text-green-500 font-semibold">Money Bank</h1>
     </header>
-    <main class="mx-10">
-        <section class="grid grid-cols-2">
-            <div class="">
+    <main class="mx-4">
+        <section class="grid gap-2 sm:grid-cols-1 lg:grid-cols-2">
+            <div>
                 <img class="lg:w-100" src="images/background.jpg" alt="">
             </div>
-            <div class="mx-auto">
-                <h2 class="text-4xl text-center my-3 text-blue-300 font-semibold">Income</h2>
-                <p class="text-2xl text-blue-400 font-semibold">Income: </p><input id="income-amount" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-4" type="text" placeholder="Your Income">
-                <h2 class="text-4xl text-center my-3 text-blue-300 font-semibold">Expenses</h2>
-                <p class="text-2xl text-blue-400 font-semibold">Food: </p><input id="food-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-4" type="text" placeholder="Your Income">
-                <p class="text-2xl text-blue-400 font-semibold">Rent: </p><input id="rent-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-4" type="text" placeholder="Your Income">
-                <p class="text-2xl text-blue-400 font-semibold">Clothes: </p><input id="cloth-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-4" type="text" placeholder="Your Income">
-                <button id="calculate-button" class="bg-orange-400 p-3 rounded mt-3 text-white font-medium w-3/4">Calculate</button>
+            <div class="">
+                <div class="sm:mx-10 lg:px-10">
+                    <div>
+                        <h2 class="text-4xl my-4 text-blue-300 font-semibold text-center">Income</h2>
+                        <p class="text-2xl text-blue-400 font-semibold inline lg:ml-2">Income: <input id="income-amount" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-2" type="text" placeholder="Your Income"></p>
+                    
 
-                <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Total Expenses : <span id="total-expenses">4000</span></h2>
-                <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Balance: <span id="balance">3000</span> </h2>
-                <p class="text-2xl text-blue-400 font-medium inline">Save</p>
-                <input id="saving-input" class="border-2 border-gray-400 rounded w-1/4 p-1 mb-4" type="text">
-                <p class="inline">%</p>
-                <button id="save-button" class="bg-orange-400 p-3 rounded mt-3 text-white font-medium w-2/4">Save</button>
+                        <h2 class="text-4xl my-4 text-blue-300 font-semibold text-center">Expenses</h2>
+                        <p class="text-2xl text-blue-400 font-semibold">Food: <input id="food-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-8  sm:ml-6" type="text" placeholder="Your Food Cost"></p>
+                    
+                        <p class="text-2xl text-blue-400 font-semibold inline">Rent: <input id="rent-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-9 sm:ml-8" type="text" placeholder="Your Rent Cost"></p>
+                    
+                        <p class="text-2xl text-blue-400 font-semibold inline">Clothes: <input id="cloth-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-1" type="text" placeholder="Your Cloth Cost"></p>
+                    
+                        <button id="calculate-button" class="bg-orange-400 p-3 rounded mt-3 text-white font-medium w-3/4 lg:ml-24 sm:ml-24 mb-4">Calculate</button>
 
-                <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Saving Amount : <span id="saving-amount">3000</span></h2>
-                <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Remaining Balance: <span id="remain-balance">3000</span> </h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Total Expenses : <span id="total-expenses">4000</span></h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold mb-8">Balance: <span id="balance">3000</span> </h2>
+                    </div>
+                    <div>
+                        <p class="text-2xl text-blue-400 font-medium inline">Save <input id="saving-input" class="border-2 border-gray-400 rounded w-2/6 p-1 mb-4 lg:mr-4 lg:ml-9 sm:ml-6 sm:mr-4" type="text" placeholder="   Percentage"></p>
+                    
+                        <p class="inline lg:mr-4">%</p>
+                        <button id="save-button" class="bg-orange-400 p-3 rounded text-white font-medium w-2/6 sm:ml-4">Save</button>
+
+                        <h2 class="text-3xl text-center my-3 mt-6 text-blue-300 font-semibold">Saving Amount : <span id="saving-amount">3000</span></h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Remaining Balance: <span id="remain-balance">3000</span> </h2>
+                    </div>
+                    <div>
+                        <h2 id="error1" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden bg-red-500">Your Total Expanses is More Than Your Income</h2>
+                        <h2 id="error2" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">Please Enter a Positive Number Value</h2>
+                        <h2 id="error3" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">insufficient balance for saving money!!</h2>
+                        <h2 id="error4" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">Enter A Positive value at Percentage Input!!</h2>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
