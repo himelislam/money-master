@@ -4,52 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Bank</title>
+    <title>Pigi Bank</title>
     <!-- tailwind cdn css  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fons awsome kit link -->
+    <script src="https://kit.fontawesome.com/a040b39b73.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 class="text-5xl text-center my-7 text-green-500 font-semibold">Money Bank</h1>
+    <header> 
+        <!-- Header Part -->
+        <h1 class="text-6xl text-center my-7 text-indigo-400 font-semibold font-mono">Pigi Bank <i class="fa-solid fa-piggy-bank"></i></h1>
     </header>
     <main class="mx-4">
-        <section class="grid gap-2 sm:grid-cols-1 lg:grid-cols-2">
+        <section class="grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
+            <!-- left div section -->
             <div>
                 <img class="lg:w-100" src="images/background.jpg" alt="">
             </div>
-            <div class="">
+            <!-- right div section -->
+            <div class="bg-gray-100">
                 <div class="sm:mx-10 lg:px-10">
                     <div>
-                        <h2 class="text-4xl my-4 text-blue-300 font-semibold text-center">Income</h2>
-                        <p class="text-2xl text-blue-400 font-semibold inline lg:ml-2">Income: <input id="income-amount" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-2" type="text" placeholder="Your Income"></p>
+                        <!-- Income and Total Cost caluculation section -->
+                        <h2 class="text-4xl my-4 text-red-400 font-semibold text-center font-mono">Income</h2>
+                        <p class="text-2xl text-blue-400 font-semibold inline  font-mono">Income: <input id="income-amount" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-2 lg:ml-3 sm:ml-4" type="text" placeholder="Your Income"></p>
                     
 
-                        <h2 class="text-4xl my-4 text-blue-300 font-semibold text-center">Expenses</h2>
-                        <p class="text-2xl text-blue-400 font-semibold">Food: <input id="food-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-8  sm:ml-6" type="text" placeholder="Your Food Cost"></p>
+                        <h2 class="text-4xl my-4 text-red-400 font-semibold text-center font-mono">Expenses</h2>
+                        <p class="text-2xl text-blue-400 font-semibold font-mono">Food: <input id="food-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-9  sm:ml-10" type="text" placeholder="Your Food Cost"></p>
                     
-                        <p class="text-2xl text-blue-400 font-semibold inline">Rent: <input id="rent-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-9 sm:ml-8" type="text" placeholder="Your Rent Cost"></p>
+                        <p class="text-2xl text-blue-400 font-semibold inline font-mono">Rent: <input id="rent-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-9 sm:ml-10" type="text" placeholder="Your Rent Cost"></p>
                     
-                        <p class="text-2xl text-blue-400 font-semibold inline">Clothes: <input id="cloth-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5 lg:ml-1" type="text" placeholder="Your Cloth Cost"></p>
+                        <p class="text-2xl text-blue-400 font-semibold inline font-mono">Clothes: <input id="cloth-cost" class="border-2 border-gray-400 rounded w-3/4 p-1 mb-5" type="text" placeholder="Your Cloth Cost"></p>
                     
-                        <button id="calculate-button" class="bg-orange-400 p-3 rounded mt-3 text-white font-medium w-3/4 lg:ml-24 sm:ml-24 mb-4">Calculate</button>
+                        <button id="calculate-button" class="bg-green-500 p-3 rounded mt-3 text-white font-medium w-3/4 lg:ml-28 sm:ml-16 mb-4 font-mono">Calculate</button>
 
-                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Total Expenses : <span id="total-expenses">4000</span></h2>
-                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold mb-8">Balance: <span id="balance">3000</span> </h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-500 font-semibold font-mono">Total Expenses : <span id="total-expenses">4000</span></h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-500 font-semibold mb-8 font-mono">Balance: <span id="balance">3000</span> </h2>
                     </div>
                     <div>
-                        <p class="text-2xl text-blue-400 font-medium inline">Save <input id="saving-input" class="border-2 border-gray-400 rounded w-2/6 p-1 mb-4 lg:mr-4 lg:ml-9 sm:ml-6 sm:mr-4" type="text" placeholder="   Percentage"></p>
+                        <!-- Saving Percentage and Remaining balance caluculation section -->
+                        <p class="text-2xl text-blue-400 font-semibold inline font-mono">Save:<input id="saving-input" class="border-2 border-gray-400 rounded w-2/6 p-1 mb-4 lg:mr-4 lg:ml-12 sm:ml-6 sm:mr-4" type="text" placeholder=" Percentage"></p>
                     
-                        <p class="inline lg:mr-4">%</p>
-                        <button id="save-button" class="bg-orange-400 p-3 rounded text-white font-medium w-2/6 sm:ml-4">Save</button>
+                        <p class="inline lg:mr-2 font-mono">%</p>
+                        <button id="save-button" class="bg-green-500 p-3 rounded text-white font-medium w-2/6 sm:ml-4 font-mono">Save</button>
 
-                        <h2 class="text-3xl text-center my-3 mt-6 text-blue-300 font-semibold">Saving Amount : <span id="saving-amount">3000</span></h2>
-                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold">Remaining Balance: <span id="remain-balance">3000</span> </h2>
+                        <h2 class="text-3xl text-center my-3 mt-6 text-blue-500 font-semibold font-mono">Saving Amount : <span id="saving-amount">3000</span></h2>
+                        <h2 class="text-3xl text-center my-3 mt-3 text-blue-500 font-semibold font-mono">Remaining Balance: <span id="remain-balance">3000</span> </h2>
                     </div>
                     <div>
-                        <h2 id="error1" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden bg-red-500">Your Total Expanses is More Than Your Income</h2>
-                        <h2 id="error2" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">Please Enter a Positive Number Value</h2>
-                        <h2 id="error3" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">insufficient balance for saving money!!</h2>
-                        <h2 id="error4" class="text-3xl text-center my-3 mt-3 text-blue-300 font-semibold hidden">Enter A Positive value at Percentage Input!!</h2>
+                        <!-- Error Massage section -->
+                        <h2 id="error1" class="text-3xl text-center my-3 mt-3 text-white font-semibold hidden bg-red-600 font-mono">Your Total Expanses is More Than Your Income</h2>
+                        <h2 id="error2" class="text-3xl text-center my-3 mt-3 text-white bg-red-600 font-semibold hidden font-mono">Please Enter a Positive Number Value</h2>
+                        <h2 id="error3" class="text-3xl text-center my-3 mt-3 text-white bg-red-600 font-semibold hidden font-mono">insufficient balance for saving money!!</h2>
+                        <h2 id="error4" class="text-3xl text-center my-3 mt-3 text-white bg-red-600 font-semibold hidden font-mono">Enter A Positive value at Percentage Input!!</h2>
                     </div>
                 </div>
             </div>
